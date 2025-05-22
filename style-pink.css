@@ -1,0 +1,115 @@
+/* Загальні налаштування */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    color: #5a0b3d;
+    background: linear-gradient(to bottom, #fce4ec, #f8bbd0);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Карточка запрошення */
+.invitation-card {
+    background: #fff0f5;
+    border: 3px solid #d81b60;
+    border-radius: 30px;
+    padding: 40px 35px;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(216, 27, 96, 0.4);
+    transition: box-shadow 0.3s ease;
+}
+
+.invitation-card:hover {
+    box-shadow: 0 8px 30px rgba(216, 27, 96, 0.7);
+}
+
+/* Заголовок */
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #c2185b;
+    margin-bottom: 15px;
+    user-select: none;
+}
+
+/* Вступ */
+.intro {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #880e4f;
+    margin-bottom: 20px;
+}
+
+/* Текст загальний */
+.details p,
+.dress-code p,
+.footer {
+    margin: 12px 0;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    color: #6a0d47;
+}
+
+/* Блок деталей */
+.details {
+    margin-top: 25px;
+}
+
+/* Блок дрес-коду */
+.dress-code {
+    background: #fce4ec;
+    border-radius: 20px;
+    padding: 25px 20px;
+    margin-top: 30px;
+    border: 2px solid #ec407a;
+    box-shadow: 0 0 15px rgba(236, 64, 122, 0.3);
+}
+
+/* Заголовок дрес-коду */
+.dress-code h2 {
+    color: #ad1457;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    user-select: none;
+}
+
+/* Підписка внизу */
+.footer {
+    margin-top: 35px;
+    font-style: italic;
+    color: #800047;
+}
+
+/* Адаптивність */
+@media (max-width: 480px) {
+    .invitation-card {
+        padding: 30px 20px;
+        margin: 20px 15px;
+    }
+
+    h1 {
+        font-size: 2.4rem;
+    }
+
+    .intro {
+        font-size: 1.2rem;
+    }
+
+    .details p,
+    .dress-code p,
+    .footer {
+        font-size: 1rem;
+    }
+
+    .dress-code {
+        padding: 20px 15px;
+    }
+
+    .dress-code h2 {
+        font-size: 1.6rem;
+    }
+}

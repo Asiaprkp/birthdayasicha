@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>18-річчя Аськи 🎉</title>
+    <link rel="stylesheet" href="style-dark.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    <!-- 🎵 Фоновий звук -->
+    <audio autoplay loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+    </audio>
+
+    <!-- 🌟 Вогники -->
+    <div class="sparkle"></div>
+
+    <!-- 🎂 Основний вміст -->
+    <div class="content-dark">
+        <h1>Запрошення на 18-річчя Аськи 🥂</h1>
+
+        <img src="https://i.imgur.com/Fj4mQEm.png" alt="Шампанське" class="champagne" />
+
+        <div id="countdown"></div>
+
+        <audio id="click-sound">
+            <source src="https://www.fesliyanstudios.com/play-mp3/387" type="audio/mpeg" />
+        </audio>
+
+        <a href="invitation.html" class="invite-button" onclick="document.getElementById('click-sound').play()">Натисни
+            щоб побачити запрошення</a>
+    </div>
+
+    <script>
+        // 🎯 Відлік до 7 березня 2026
+        const countdown = document.getElementById("countdown");
+        const targetDate = new Date("March 7, 2026 00:00:00").getTime();
+
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = targetDate - now;
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            countdown.innerHTML = `<div class="countdown-box">До свята: ${days} днів ${hours} год ${minutes} хв ${seconds} сек</div>`;
+        }, 1000);
+    </script>
+</body>
+
+</html>

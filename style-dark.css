@@ -1,0 +1,149 @@
+/* Загальні налаштування */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #000;
+    overflow-x: hidden;
+    position: relative;
+    color: #fff;
+}
+
+/* Вогники */
+.sparkle::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-image: radial-gradient(circle, rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+    background-size: 25px 25px;
+    animation: sparkle 10s linear infinite;
+    z-index: 0;
+}
+
+@keyframes sparkle {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 100px 100px;
+    }
+}
+
+/* Основний блок */
+.content-dark {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 80px 15px;
+}
+
+/* Заголовок */
+.content-dark h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 3.2rem;
+    color: #ff6ec7;
+    text-shadow: 0 0 15px #ff6ec7, 0 0 30px #e91e63;
+    margin-bottom: 30px;
+    line-height: 1.1;
+}
+
+/* Шампанське */
+.champagne {
+    width: 100px;
+    max-width: 50vw;
+    /* адаптація під екран */
+    animation: bounce 1.8s ease-in-out infinite alternate;
+}
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-15px);
+    }
+}
+
+/* Кнопка */
+.invite-button {
+    display: inline-block;
+    margin-top: 40px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: #fff;
+    background: linear-gradient(to right, #ff6ec7, #ff1493);
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0 0 15px #ff6ec7;
+    cursor: pointer;
+    animation: pulse 1.5s infinite;
+    transition: transform 0.2s ease;
+    max-width: 90vw;
+    white-space: normal;
+    /* Дозволяє перенос рядка */
+}
+
+.invite-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #ff69b4;
+}
+
+/* Анімація пульсу */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px #ff69b4;
+    }
+
+    50% {
+        box-shadow: 0 0 20px #ff1493;
+    }
+
+    100% {
+        box-shadow: 0 0 10px #ff69b4;
+    }
+}
+
+/* Відлік часу */
+#countdown {
+    margin-top: 30px;
+    padding: 0 10px;
+}
+
+.countdown-box {
+    display: inline-block;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: rgba(255, 105, 180, 0.1);
+    border: 2px solid #ff69b4;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #ff69b4;
+}
+
+/* Медіа-запит для маленьких екранів */
+@media (max-width: 480px) {
+    .content-dark h1 {
+        font-size: 2.4rem;
+        margin-bottom: 20px;
+    }
+
+    .champagne {
+        width: 70px;
+    }
+
+    .invite-button {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .countdown-box {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}
