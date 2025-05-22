@@ -1,12 +1,16 @@
-/* Загальні налаштування */
+/* Загальні налаштування для мобільних */
+html,
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     font-family: 'Open Sans', sans-serif;
     background-color: #000;
-    overflow-x: hidden;
-    position: relative;
     color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 /* Вогники */
@@ -33,30 +37,36 @@ body {
     }
 }
 
-/* Основний блок */
+/* Основний контейнер займає весь екран */
 .content-dark {
     position: relative;
     z-index: 1;
     text-align: center;
-    padding: 80px 15px;
+    padding: 40px 20px;
+    width: 95vw;
+    height: 95vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Заголовок */
 .content-dark h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 3.2rem;
+    font-size: 2.5rem;
     color: #ff6ec7;
     text-shadow: 0 0 15px #ff6ec7, 0 0 30px #e91e63;
-    margin-bottom: 30px;
-    line-height: 1.1;
+    margin-bottom: 25px;
 }
 
 /* Шампанське */
 .champagne {
-    width: 100px;
-    max-width: 50vw;
-    /* адаптація під екран */
+    width: 80px;
     animation: bounce 1.8s ease-in-out infinite alternate;
+    margin-bottom: 20px;
 }
 
 @keyframes bounce {
@@ -69,12 +79,27 @@ body {
     }
 }
 
+/* Відлік часу */
+#countdown {
+    margin-bottom: 25px;
+}
+
+.countdown-box {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background: rgba(255, 105, 180, 0.1);
+    border: 2px solid #ff69b4;
+    border-radius: 20px;
+    box-shadow: 0 0 10px #ff69b4;
+    max-width: 300px;
+}
+
 /* Кнопка */
 .invite-button {
     display: inline-block;
-    margin-top: 40px;
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    padding: 14px 30px;
+    font-size: 1.1rem;
     color: #fff;
     background: linear-gradient(to right, #ff6ec7, #ff1493);
     border: none;
@@ -84,9 +109,6 @@ body {
     cursor: pointer;
     animation: pulse 1.5s infinite;
     transition: transform 0.2s ease;
-    max-width: 90vw;
-    white-space: normal;
-    /* Дозволяє перенос рядка */
 }
 
 .invite-button:hover {
@@ -106,44 +128,5 @@ body {
 
     100% {
         box-shadow: 0 0 10px #ff69b4;
-    }
-}
-
-/* Відлік часу */
-#countdown {
-    margin-top: 30px;
-    padding: 0 10px;
-}
-
-.countdown-box {
-    display: inline-block;
-    padding: 12px 20px;
-    font-size: 1.1rem;
-    color: #fff;
-    background: rgba(255, 105, 180, 0.1);
-    border: 2px solid #ff69b4;
-    border-radius: 20px;
-    box-shadow: 0 0 10px #ff69b4;
-}
-
-/* Медіа-запит для маленьких екранів */
-@media (max-width: 480px) {
-    .content-dark h1 {
-        font-size: 2.4rem;
-        margin-bottom: 20px;
-    }
-
-    .champagne {
-        width: 70px;
-    }
-
-    .invite-button {
-        font-size: 1rem;
-        padding: 12px 20px;
-    }
-
-    .countdown-box {
-        font-size: 1rem;
-        padding: 10px 15px;
     }
 }

@@ -1,115 +1,80 @@
-/* Загальні налаштування */
+/* Загальні налаштування для мобільних */
+html,
 body {
     margin: 0;
     padding: 0;
+    height: 100%;
     font-family: 'Open Sans', sans-serif;
-    color: #5a0b3d;
-    background: linear-gradient(to bottom, #fce4ec, #f8bbd0);
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    color: #6a0459;
+    background: linear-gradient(to bottom, #ffe6f0, #ffd6e7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
-/* Карточка запрошення */
+/* Карточка запрошення займає весь екран мобільного */
 .invitation-card {
-    background: #fff0f5;
-    border: 3px solid #d81b60;
+    background: #fff0f8;
+    border: 4px dotted #ff91b6;
     border-radius: 30px;
-    padding: 40px 35px;
-    max-width: 600px;
-    margin: 40px auto;
+    padding: 30px 20px;
+    width: 95vw;
+    /* майже весь екран за шириною */
+    height: 95vh;
+    /* майже весь екран за висотою */
+    box-sizing: border-box;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(216, 27, 96, 0.4);
-    transition: box-shadow 0.3s ease;
-}
-
-.invitation-card:hover {
-    box-shadow: 0 8px 30px rgba(216, 27, 96, 0.7);
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+    overflow-y: auto;
+    /* прокрутка, якщо текст зайде за межі */
 }
 
 /* Заголовок */
 h1 {
     font-family: 'Pacifico', cursive;
-    font-size: 3rem;
-    color: #c2185b;
+    font-size: 2.2rem;
+    color: #e91e63;
     margin-bottom: 15px;
-    user-select: none;
 }
 
-/* Вступ */
+/* Вступний текст */
 .intro {
-    font-size: 1.4rem;
-    font-weight: 700;
-    color: #880e4f;
-    margin-bottom: 20px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d5007d;
 }
 
-/* Текст загальний */
+/* Текст деталей і дрес-коду */
 .details p,
 .dress-code p,
 .footer {
-    margin: 12px 0;
-    font-size: 1.15rem;
-    line-height: 1.5;
-    color: #6a0d47;
-}
-
-/* Блок деталей */
-.details {
-    margin-top: 25px;
+    margin: 8px 0;
+    font-size: 1rem;
+    line-height: 1.3;
 }
 
 /* Блок дрес-коду */
 .dress-code {
-    background: #fce4ec;
+    background: #ffe6ef;
     border-radius: 20px;
-    padding: 25px 20px;
-    margin-top: 30px;
-    border: 2px solid #ec407a;
-    box-shadow: 0 0 15px rgba(236, 64, 122, 0.3);
+    padding: 15px 10px;
+    margin-top: 15px;
+    border: 2px solid #ffb3d1;
 }
 
 /* Заголовок дрес-коду */
 .dress-code h2 {
-    color: #ad1457;
+    color: #d81b60;
     font-family: 'Pacifico', cursive;
-    font-size: 2rem;
-    margin-bottom: 15px;
-    user-select: none;
+    margin-bottom: 8px;
+    font-size: 1.4rem;
 }
 
-/* Підписка внизу */
+/* Підпис */
 .footer {
-    margin-top: 35px;
+    margin-top: 25px;
     font-style: italic;
-    color: #800047;
-}
-
-/* Адаптивність */
-@media (max-width: 480px) {
-    .invitation-card {
-        padding: 30px 20px;
-        margin: 20px 15px;
-    }
-
-    h1 {
-        font-size: 2.4rem;
-    }
-
-    .intro {
-        font-size: 1.2rem;
-    }
-
-    .details p,
-    .dress-code p,
-    .footer {
-        font-size: 1rem;
-    }
-
-    .dress-code {
-        padding: 20px 15px;
-    }
-
-    .dress-code h2 {
-        font-size: 1.6rem;
-    }
+    color: #a50055;
+    font-size: 1rem;
 }
